@@ -1,0 +1,33 @@
+package com.krakedav;
+/*
+ * comentario de varias lineas 
+ * */
+public class TestPersona {
+	
+	public static void main(String[] args) {
+		Personas p;//1. Declaro una variable llamada p de tipo  persona 
+		Personas p2 =new Personas();
+		p=new Personas();//2 .instanciar un objeto Persona, referenciarlo con p 
+		//3 .acedo a los atributos 
+		System.out.println("nombre: "+p.nombre);
+		System.out.println("edad: "+p.edadPersonas);
+		System.out.println("estatura: "+p.estatura);
+		//4 .modificar los atributos
+		p.nombre="Mario";
+		p.edadPersonas=45;
+		p.estatura=1.56;
+		//5 .acedo a los atributos 
+		System.out.println("_______________________");
+		System.out.println("nombre: "+p.nombre);
+		System.out.println("edad: "+p.edadPersonas);
+		System.out.println("estatura: "+p.estatura);
+		
+		p2.nombre="Angelina";
+		System.out.println("*************");
+		System.out.println("p.nombre: "+p.nombre);
+		System.out.println("p2.nombre: "+p2.nombre);
+		
+		
+	}
+
+}
