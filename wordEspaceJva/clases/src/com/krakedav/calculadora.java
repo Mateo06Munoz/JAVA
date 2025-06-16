@@ -16,5 +16,9 @@ public class calculadora {
 		resultado=v1+v2;
 		return resultado;
 	}
+	public double dividir(int v1, int v2){
+		int resultado=v1/v2;
+		return resultado;
+	}
 
 }
