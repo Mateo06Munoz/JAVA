@@ -24,5 +24,8 @@ public class calculadora {
 		int resultado=(v1+v2+v3)/3;
 		return resultado;
 	}
+	public void mostarResultado(){
+		System.out.println("Ahurita no joven,Sali al almuerzo regreso en 15 minutos");
+	}
 	
 }
