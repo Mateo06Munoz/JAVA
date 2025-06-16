@@ -20,5 +20,9 @@ public class calculadora {
 		int resultado=v1/v2;
 		return resultado;
 	}
-
+	public double promediar(int v1, int v2,int v3){
+		int resultado=(v1+v2+v3)/3;
+		return resultado;
+	}
+	
 }
