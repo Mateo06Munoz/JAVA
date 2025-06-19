@@ -1,4 +1,4 @@
-package com.krakedav;
+ package com.krakedav;
 /*
  * comentario de varias lineas 
  * */
@@ -9,23 +9,23 @@ public class TestPersona {
 		Personas p2 =new Personas();
 		p=new Personas();//2 .instanciar un objeto Persona, referenciarlo con p 
 		//3 .acedo a los atributos 
-		System.out.println("nombre: "+p.nombre);
-		System.out.println("edad: "+p.edadPersonas);
-		System.out.println("estatura: "+p.estatura);
+		System.out.println("nombre: "+p.getNombre());
+		System.out.println("edad: "+p.getEdadPersonas());
+		System.out.println("estatura: "+p.getEstatura());
 		//4 .modificar los atributos
-		p.nombre="Mario";
-		p.edadPersonas=45;
-		p.estatura=1.56;
+		p.setNombre("Mario");
+		p.setEdadPersonas(45);
+		p.setEstatura(1.56);
 		//5 .acedo a los atributos 
 		System.out.println("_______________________");
-		System.out.println("nombre: "+p.nombre);
-		System.out.println("edad: "+p.edadPersonas);
-		System.out.println("estatura: "+p.estatura);
+		System.out.println("nombre: "+p.getNombre());
+		System.out.println("edad: "+p.getEdadPersonas());
+		System.out.println("estatura: "+p.getEstatura());
 		
-		p2.nombre="Angelina";
+		p2.setNombre("Angelina");
 		System.out.println("*************");
-		System.out.println("p.nombre: "+p.nombre);
-		System.out.println("p2.nombre: "+p2.nombre);
+		System.out.println("p.nombre: "+p.getNombre());
+		System.out.println("p2.nombre: "+p2.getNombre());
 		
 		
 	}

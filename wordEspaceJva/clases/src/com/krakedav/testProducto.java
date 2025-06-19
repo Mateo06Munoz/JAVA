@@ -7,37 +7,37 @@ public class testProducto {
 		Producto productoB=new Producto();
 		Producto productoC=new Producto();
 		
-		productoA.nombre="paracetamol";
-		productoA.descripcion="para curar un dolor";
-		productoA.precio=0.45;
-		productoA.stockAnual=100;
+		productoA.setNombre("paracetamol");
+		productoA.setDescripcion("para curar un dolor");
+		productoA.setPrecio(0.45);
+		productoA.setStockAnual(100);
 		
-		System.out.println("nombre:"+productoA.nombre);
-		System.out.println("nombre:"+productoA.descripcion);
-		System.out.println("nombre:"+productoA.precio);
-		System.out.println("nombre:"+productoA.stockAnual);
-		
-		System.out.println("----------------------------------");
-		productoB.nombre="salandrius";
-		productoB.descripcion="para el dolor de la cabeza";
-		productoB.precio=0.55;
-		productoB.stockAnual=150;
-		
-		System.out.println("nombre:"+productoB.nombre);
-		System.out.println("nombre:"+productoB.descripcion);
-		System.out.println("nombre:"+productoB.precio);
-		System.out.println("nombre:"+productoB.stockAnual);
+		System.out.println("nombre:"+productoA.getNombre());
+		System.out.println("nombre:"+productoA.getDescripcion());
+		System.out.println("nombre:"+productoA.getPrecio());
+		System.out.println("nombre:"+productoA.getStockAnual());
 		
 		System.out.println("----------------------------------");
-		productoC.nombre="aspirina";
-		productoC.descripcion="para el dolor de la panza";
-		productoC.precio=0.25;
-		productoC.stockAnual=85;
+		productoB.setNombre("salandrius");
+		productoB.setDescripcion("para el dolor de la cabeza");
+		productoB.setPrecio(0.55);
+		productoB.setStockAnual(150);
 		
-		System.out.println("nombre:"+productoC.nombre);
-		System.out.println("nombre:"+productoC.descripcion);
-		System.out.println("nombre:"+productoC.precio);
-		System.out.println("nombre:"+productoC.stockAnual);
+		System.out.println("nombre:"+productoB.getNombre());
+		System.out.println("nombre:"+productoB.getDescripcion());
+		System.out.println("nombre:"+productoB.getPrecio());
+		System.out.println("nombre:"+productoB.getStockAnual());
+		
+		System.out.println("----------------------------------");
+		productoC.setNombre("aspirina");
+		productoC.setDescripcion("para el dolor de la panza");
+		productoC.setPrecio(0.25);
+		productoC.setStockAnual(85);
+		
+		System.out.println("nombre:"+productoC.getNombre());
+		System.out.println("nombre:"+productoC.getDescripcion());
+		System.out.println("nombre:"+productoC.getPrecio());
+		System.out.println("nombre:"+productoC.getStockAnual());
 		
 		
 		
