@@ -8,6 +8,12 @@ public class Rectangulo {
 		int area= base*altura;
 		return area;
 	}
+	public Rectangulo() {}
+	
+	public Rectangulo(int base,int altura) {
+		this.base=base;
+		this.altura=altura;
+	}
 	public int calcularPerimetro() {
 		int area=base+base+altura+altura;
 		return area;

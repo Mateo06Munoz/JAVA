@@ -2,6 +2,11 @@ package com.krakedav;
 
 public class Cuadrado {
 	int lado;
+	
+	public Cuadrado() {}
+	public Cuadrado(int lado) {
+		this.lado=lado;
+	}
 	public int areaCuadrado() {
 		int resultado=lado*lado;
 		return resultado;

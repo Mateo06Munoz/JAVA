@@ -5,6 +5,11 @@ public class testRctangulo {
 	public static void main(String[] args) {
 		Rectangulo r1=new Rectangulo();
 		Rectangulo r2=new Rectangulo();
+		Rectangulo r3=new Rectangulo(10,5);
+		
+		int AreaR3=r3.calcularArea();
+		System.out.println("Area de r3: "+AreaR3);
+		
 		r1.setBase(10);
 		r1.setAltura(5);
 		

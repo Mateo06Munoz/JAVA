@@ -4,6 +4,15 @@ public class Auto {
 	private  String nombre;
 	private int anio;
 	private double precio;
+	
+	public Auto() {}
+	
+	public Auto(String nombre,int anio,double precio) {
+		this.nombre=nombre;
+		this.anio=anio;
+		this.precio=precio;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}

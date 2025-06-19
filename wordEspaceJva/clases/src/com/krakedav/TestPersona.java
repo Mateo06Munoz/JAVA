@@ -7,6 +7,12 @@ public class TestPersona {
 	public static void main(String[] args) {
 		Personas p;//1. Declaro una variable llamada p de tipo  persona 
 		Personas p2 =new Personas();
+		Personas p3=new Personas ("bolivar");
+		Personas p4=new Personas ("bolivar",17,1.72);
+		
+		System.out.println("nombre: "+p4.getNombre());
+		System.out.println("edad: "+p4.getEdadPersonas());
+		System.out.println("estatura: "+p4.getEstatura());
 		p=new Personas();//2 .instanciar un objeto Persona, referenciarlo con p 
 		//3 .acedo a los atributos 
 		System.out.println("nombre: "+p.getNombre());
