@@ -1,7 +1,7 @@
 package com.krakedav;
 
 public class Cuadrado {
-	int lado;
+	public int lado;
 	
 	public Cuadrado() {}
 	public Cuadrado(int lado) {

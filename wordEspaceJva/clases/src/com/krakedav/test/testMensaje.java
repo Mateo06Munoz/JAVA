@@ -1,4 +1,6 @@
-package com.krakedav;
+package com.krakedav.test;
+
+import com.krakedav.Mensajeria;
 
 public class testMensaje {
 

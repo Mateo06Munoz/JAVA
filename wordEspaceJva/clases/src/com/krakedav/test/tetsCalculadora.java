@@ -1,4 +1,6 @@
-package com.krakedav;
+package com.krakedav.test;
+
+import com.krakedav.calculadora;
 
 public class tetsCalculadora {
 

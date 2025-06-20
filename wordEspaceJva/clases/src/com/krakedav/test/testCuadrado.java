@@ -1,4 +1,6 @@
-package com.krakedav;
+package com.krakedav.test;
+
+import com.krakedav.Cuadrado;
 
 public class testCuadrado {
 
@@ -20,7 +22,6 @@ public class testCuadrado {
 		System.out.println("area c1: "+ resultadoC1);
 		System.out.println("area c2: "+ resultadoC2);
 		System.out.println("area c3: "+ resultadoC3);
-		
 		
 		int resultadoC4=c1.perimetroCuadrado();
 		int resultadoC5=c2.perimetroCuadrado();

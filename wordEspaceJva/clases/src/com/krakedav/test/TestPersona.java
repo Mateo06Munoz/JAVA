@@ -1,4 +1,7 @@
- package com.krakedav;
+ package com.krakedav.test;
+
+import com.krakedav.Personas;
+
 /*
  * comentario de varias lineas 
  * */
