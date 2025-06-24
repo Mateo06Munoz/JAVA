@@ -9,10 +9,10 @@ public class TestVender {
 		MaquinaDulces maquina=new MaquinaDulces();
 		maquina.configurarMquina("A1", "A2", "B1", "B2");
 		
-		Producto producto=new Producto("KE34",0.85,"Papitas");
+		Producto producto=new Producto("Papitas",0.85,"KE34");
 		maquina.cargarProducto(producto, "B1", 4);
 		
-		Producto producto2=new Producto("D456",0.70,"Doritos");
+		Producto producto2=new Producto("Doritos",0.70,"D456");
 		maquina.cargarProducto(producto2, "A1", 6);
 		
 		maquina.vender("A1");

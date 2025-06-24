@@ -1,6 +1,5 @@
 package com.clearmids.test;
 
-import com.clearmids.componentes.Cedula;
 import com.clearmids.componentes.Producto;
 import com.clearmids.maquina.MaquinaDulces;
 
@@ -9,7 +8,7 @@ public class TestIncrementarProductos {
 		MaquinaDulces maquina=new MaquinaDulces();
 		maquina.configurarMquina("A1", "A2", "B1", "B2");
 		
-		Producto producto=new Producto("KE34",0.85,"Papitas");
+		Producto producto=new Producto("Papitas",0.85,"KE34");
 		maquina.cargarProducto(producto, "B1", 4);
 		
 		maquina.mostrarProductos();

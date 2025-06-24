@@ -73,27 +73,35 @@ public class MaquinaDulces {
 		System.out.println("celda 1");
 		System.out.println("codigo: "+celda1.getCodigo());
 		System.out.println("Stock: "+celda1.getStock());
-		System.out.println("nombre: "+p1.getNombre());
-		System.out.println("precio: "+p1.getPrecio());
+		if(p1!=null) {
+			System.out.println("nombre: "+p1.getNombre());
+			System.out.println("precio: "+p1.getPrecio());
+		}
+		
 		Producto p2=celda2.getProducto();
 		System.out.println("celda 2");
 		System.out.println("codigo: "+celda2.getCodigo());
 		System.out.println("Stock: "+celda2.getStock());
-		System.out.println("nombre: "+p2.getNombre());
-		System.out.println("precio: "+p2.getPrecio());
+		if(p2!=null) {
+			System.out.println("nombre: "+p2.getNombre());
+			System.out.println("precio: "+p2.getPrecio());
+		}
 		Producto p3=celda3.getProducto();
 		System.out.println("celda 3");
 		System.out.println("codigo: "+celda3.getCodigo());
 		System.out.println("Stock: "+celda3.getStock());
-		System.out.println("nombre: "+p3.getNombre());
-		System.out.println("precio: "+p3.getPrecio());
+		if(p3!=null) {
+			System.out.println("nombre: "+p3.getNombre());
+			System.out.println("precio: "+p3.getPrecio());
+		}
 		Producto p4=celda4.getProducto();
 		System.out.println("celda 4");
 		System.out.println("codigo: "+celda4.getCodigo());
 		System.out.println("Stock: "+celda4.getStock());
-		System.out.println("nombre: "+p4.getNombre());
-		System.out.println("precio: "+p4.getPrecio());
-		
+		if(p4!=null) {
+			System.out.println("nombre: "+p4.getNombre());
+			System.out.println("precio: "+p4.getPrecio());
+		}		
 	}
 	public Producto buscarProductoEnCelda(String codigo) {
 		if(codigo==celda1.getCodigo()) {
@@ -128,38 +136,38 @@ public class MaquinaDulces {
 		}
 		return 0.0;
 	}
-	public Cedula buscarCeldaProducto(String codigo) {
-		Producto p1=celda1.getProducto();
-		Producto p2=celda2.getProducto();
-		Producto p3=celda3.getProducto();
-		Producto p4=celda4.getProducto();
-		if(codigo==p1.getCodigo()) {
-			return celda1 ;
-		}else if(codigo==p2.getCodigo()) {
-			return celda2;
-		} else if(codigo==p3.getCodigo()) {
-			return celda3 ;
-		} else if(codigo==p4.getCodigo()) {
-			return celda4 ;
-		}
+	
+public Cedula buscarCeldaProducto(String codigoP) {
+		
+		
+		if(celda1.getProducto() != null&& codigoP == celda1.getProducto().getCodigo()) {
+				return celda1;			
+		}else if(celda2.getProducto() != null&&codigoP == celda2.getProducto().getCodigo()) {
+				return celda2;		
+		}else if(celda3.getProducto() != null&&codigoP == celda3.getProducto().getCodigo()) {
+				return celda3;
+		}else if(celda4.getProducto() != null&&codigoP == celda4.getProducto().getCodigo()) {
+				return celda4;
+		}else {
 		return null;
+		}
+		
+
+		
 	}
 	public void incrementarProductos(String codigo,int items) {
 		Cedula celdaEncontrada=buscarCeldaProducto(codigo);
-		celdaEncontrada.setStock(items);
+			celdaEncontrada.setStock(items);
 	}
+
 	public void vender(String codigo) {
-		Cedula ce=buscarCeldaProducto(codigo);
-		int S=ce.getStock();
-		int s1=S-1;
-		ce.setStock(s1);
-		Producto p1=ce.getProducto();
-		double pp=p1.getPrecio();
-		saldo=pp+saldo;
-		
+		Cedula celdaEncontrada = buscarCelda(codigo);
+		celdaEncontrada.setStock(celdaEncontrada.getStock()-1);
+		saldo = saldo + celdaEncontrada.getProducto().getPrecio();
 		mostrarProductos();
+		
 	}
-	public double venderConCambio(String codigo,double saldoC) {
+	public double venderConCambio1(String codigo,double saldoC) {
 		double cambio=saldo-saldoC;
 		Cedula ce=buscarCeldaProducto(codigo);
 		int S=ce.getStock();
@@ -168,4 +176,15 @@ public class MaquinaDulces {
 		saldo=saldo-saldoC;
 		return cambio;
 	}
+	public double venderConCambio(String codigo,double saldoI) {
+		Cedula celdaEncontrada = buscarCelda(codigo);
+		celdaEncontrada.setStock(celdaEncontrada.getStock()-1);
+		saldo = saldo + celdaEncontrada.getProducto().getPrecio();
+		mostrarProductos();
+		double cambio = saldoI - celdaEncontrada.getProducto().getPrecio();
+		mostrarProductos();
+		return cambio;
+	}
+	
+	
 }
