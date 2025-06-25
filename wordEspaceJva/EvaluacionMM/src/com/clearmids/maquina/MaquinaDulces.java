@@ -167,15 +167,6 @@ public Cedula buscarCeldaProducto(String codigoP) {
 		mostrarProductos();
 		
 	}
-	public double venderConCambio1(String codigo,double saldoC) {
-		double cambio=saldo-saldoC;
-		Cedula ce=buscarCeldaProducto(codigo);
-		int S=ce.getStock();
-		int s1=S-1;
-		ce.setStock(s1);
-		saldo=saldo-saldoC;
-		return cambio;
-	}
 	public double venderConCambio(String codigo,double saldoI) {
 		Cedula celdaEncontrada = buscarCelda(codigo);
 		celdaEncontrada.setStock(celdaEncontrada.getStock()-1);
