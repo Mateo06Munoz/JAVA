@@ -2,7 +2,6 @@ package entidades;
 
 import java.util.ArrayList;
 
-
 public class Curso {
 	private ArrayList<Estudiante> estudiantes;
 
@@ -34,25 +33,35 @@ public class Curso {
 			estudiantes.add(estudiante);
 		}
 	}
+
 	public double calcularPromedioCurso() {
-		Estudiante e=new Estudiante();
-		double sumaPE=0.0;
+		Estudiante e = new Estudiante();
+		double sumaPE = 0.0;
 		double promedioCurso;
-		double promedioE=e.calcularPromedioNotasEstudiante();
-		sumaPE=sumaPE+promedioE;
-		promedioCurso=sumaPE/estudiantes.size();
-		return 	promedioCurso;
+		double promedioE = e.calcularPromedioNotasEstudiante();
+		sumaPE = sumaPE + promedioE;
+		promedioCurso = sumaPE / estudiantes.size();
+		return promedioCurso;
 	}
+
 	public void mostrar() {
-		Estudiante E=null;
-		ArrayList<Nota> n=new ArrayList<Nota>();
-		Nota EN=null;
+		Estudiante E = null;
+		ArrayList<Nota> n = new ArrayList<Nota>();
+		Nota EN = null;
 		for (int i = 0; i < estudiantes.size(); i++) {
 			E = estudiantes.get(i);
-			n=E.getNotas();
-			System.out.println("curso, nombre: "+E.getNombre()+", apellido: "+E.getApellido()+", cedula"+E.getCedula()+", nombre de la materia: ");
+			n = E.getNotas();
+			
+			System.out.println("Curso[nombre: " + E.getNombre() + ", apellido: " + E.getApellido() + ", cedula"
+					+ E.getCedula() );
+			if(n!=null) {
+				EN = n.get(i);
+			System.out.println( "calificacion: "+EN.getCalificacion() + ", nombre de la materia: "
+					+ EN.getMateria().getNombre() + ", COD: " + EN.getMateria().getCodigo() + "]");
+			}else {	
+				System.out.println("]");
+			}
 		}
 	}
-		
 
 }

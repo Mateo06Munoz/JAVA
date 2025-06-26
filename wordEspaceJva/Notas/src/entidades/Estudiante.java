@@ -52,7 +52,7 @@ public class Estudiante {
 	}
 
 	public void agregarNota(Nota nuevaN) {
-		ArrayList<Nota> n=new ArrayList<Nota>();
+		ArrayList<Nota> n = new ArrayList<Nota>();
 		Materia mn = nuevaN.getMateria();
 		Nota en = null;
 		Materia em = null;
@@ -65,15 +65,14 @@ public class Estudiante {
 				n.add(nuevaN);
 				System.out.println("NOTA AGREGADA.");
 			}
-		}else {
+		} else {
 			System.out.println("ERROR: LA NOTA DEBE ESTAR ENTRE 0-10");
 		}
 
 	}
-	
-	
+
 	public void moificarNota(String codigo, double nuevaN) {
-		ArrayList<Nota> n=new ArrayList<Nota>();
+		ArrayList<Nota> n = new ArrayList<Nota>();
 		Nota en = null;
 		Materia em = null;
 		for (int i = 0; i < n.size(); i++) {
@@ -90,7 +89,7 @@ public class Estudiante {
 	}
 
 	public double calcularPromedioNotasEstudiante() {
-		ArrayList<Nota> nh=new ArrayList<Nota>();
+		ArrayList<Nota> nh = new ArrayList<Nota>();
 		double promedio = 0.0;
 		Nota n = null;
 		int nm = 0;
@@ -104,15 +103,16 @@ public class Estudiante {
 	}
 
 	public void mostrar() {
-		ArrayList<Nota> ny=new ArrayList<Nota>();
+		ArrayList<Nota> ny = new ArrayList<Nota>();
 		Nota n = null;
 		Materia m = null;
 		for (int i = 0; i < ny.size(); i++) {
 			n = ny.get(i);
 			m = n.getMateria();
-			System.out.println("nombre: " + nombre + ", apellido: " + apellido + "cedula: " + cedula
-					+ "nombre de la materia: " + m.getNombre() + ", codigo de la materia: " + m.getNombre()
-					+ ", calificacion: " + n.getCalificacion());
+
+			System.out.println("Estudiante[nombre: " + nombre + ", apellido: " + apellido + ", cedula: " + cedula
+					+ m.toString() + ", codigo de la materia: " + m.getNombre() + ", calificacion: "
+					+ n.getCalificacion() + "]");
 		}
 	}
 

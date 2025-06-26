@@ -8,6 +8,7 @@ public class Nota {
 		this.materia = materia;
 		this.calificacion = calificacion;
 	}
+	
 
 
 
@@ -35,7 +36,7 @@ public class Nota {
 
 
 
-	public void mostar() {
-		System.out.println("Nota[codigo de materia= "+materia.getCodigo()+", nombre de materia= "+materia.getNombre()+", calificacion= "+calificacion);
+	public void mostrar() {
+			System.out.println( "Nota[materia" +materia+", NOMBRE: "+calificacion+"]");
 	}
 }

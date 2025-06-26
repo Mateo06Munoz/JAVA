@@ -21,6 +21,9 @@ public class Materia {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	public String toString() {
+		return "Materia[COD" +codigo+", NOMBRE: "+nombre+"]";
+	}
 	
 	
 }
